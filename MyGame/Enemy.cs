@@ -10,7 +10,7 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -28,6 +28,12 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+
+        public void SetName(string name)
+        {
+            if(name.Length>8) name = name.Substring(0,8);
+            this.name = name;
         }
 
         public void TakeDamage(float damage)
