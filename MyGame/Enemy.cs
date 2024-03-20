@@ -70,6 +70,8 @@ namespace MyGame
                 shield += value;
                 if(shield>100) shield = 100;
             }
+            
+            totPowerups++;
         }
     }
 }
