@@ -4,9 +4,15 @@ namespace MyGame
 {
     public class Enemy
     {
+        private static int totPowerups;
         private string name;
         private float health;
         private float shield;
+
+        static Enemy()
+        {
+            totPowerups = 0;
+        }
 
         public Enemy(string name)
         {
@@ -28,6 +34,11 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+
+        public static int GetTotPowerups()
+        {
+            return totPowerups;
         }
 
         public void SetName(string name)
