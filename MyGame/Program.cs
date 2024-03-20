@@ -6,7 +6,8 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int n = int.Parse(args[0]);
+            Enemy[] enemies = new Enemy[n];
         }
     }
 }
