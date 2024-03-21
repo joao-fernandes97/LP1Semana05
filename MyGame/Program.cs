@@ -22,6 +22,11 @@ namespace MyGame
             Console.WriteLine($"{enemies[0].GetName()} {enemies[0].GetHealth()} {enemies[0].GetShield()}");
             enemies[0].TakeDamage(100);
             enemies[0].PickupPowerUp(PowerUp.Health,100);
+            enemies[1].PickupPowerUp(PowerUp.Shield,25);
+            enemies[1].PickupPowerUp(PowerUp.Shield,25);
+            enemies[1].PickupPowerUp(PowerUp.Shield,25);
+            enemies[1].PickupPowerUp(PowerUp.Shield,25);
+            enemies[1].TakeDamage(100);
 
             for (int i = 0; i < n; i++)
             {
@@ -30,6 +35,8 @@ namespace MyGame
                 float shield = enemies[i].GetShield();
                 Console.WriteLine($"{name} {health} {shield}");
             }
+
+            Console.WriteLine(Enemy.GetTotPowerups());
         }        
     }
 }
