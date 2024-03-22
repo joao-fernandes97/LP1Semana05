@@ -11,7 +11,7 @@ namespace JogoDeSexta
         public Level(int rooms, Toughness difficulty)
         {
            this.rooms = rooms;
-           this.difficulty = difficulty
+           this.difficulty = difficulty;
            enemies = new Enemy[rooms];
         }
 
@@ -38,6 +38,17 @@ namespace JogoDeSexta
         public void SetEnemyInRoom(int room, Enemy enemy)
         {
             enemies[room] = enemy;
+        }
+
+        public void PrintEnemies()
+        {
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                if(enemies[i]!=null)
+                {
+                    Console.WriteLine($"Room {i}: {enemies[i].GetName()}");
+                }
+            }
         }
     }
 }
