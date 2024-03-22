@@ -4,13 +4,11 @@ namespace JogoDeSexta
 {
     public class Level
     {
-        private int rooms;
         private Toughness difficulty;
         private Enemy[] enemies;
 
         public Level(int rooms, Toughness difficulty)
         {
-           this.rooms = rooms;
            this.difficulty = difficulty;
            enemies = new Enemy[rooms];
         }
@@ -22,7 +20,7 @@ namespace JogoDeSexta
 
         public int GetNumRooms()
         {
-            return rooms;
+            return enemies.Length;
         }
 
         public int GetNumEnemies()
